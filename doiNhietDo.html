@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi ngiệt độ</title>
+</head>
+<body>
+<script>
+
+    //Khởi tạo một đối tượng Temperature.
+
+    //Gán giá trị độ C cho đối tượng ở nhiệt độ 25 độ.
+
+    //Hiển thị ra màn hình nhiệt độ F và độ Kenvin tương ứng.
+
+
+    function Temperature(doC) {
+        this.doC = doC;
+        this.getDoC = function () {
+            return this.doC
+        };
+        this.getDoF = function () {
+            return 1.8 * this.doC + 32
+        };
+        this.getDoK = function () {
+            return this.doC + 273
+        }
+
+    }
+    let tinh= new Temperature(25);
+    let doC= tinh.getDoC();
+    let doF= tinh.getDoF();
+    let doK= tinh.getDoK();
+    alert("độ F = "+ doF +";độ K = "+ doK);
+    Temperature();
+
+
+</script>
+</body>
+</html>
